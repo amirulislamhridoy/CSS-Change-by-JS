@@ -28,49 +28,71 @@
             --blur: 5px;
             --color: #ffc600;
         }
-
         body {
             background-color: rgba(16, 16, 115, 0.904);
             color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             text-align: center;
         }
-
         h1 {
             font-size: 80px;
             margin-bottom: 10px;
         }
-
         h1 span {
             color: rgba(134, 134, 250, 0.904);
         }
-
         .text-div {
             font-size: 50px;
             margin-top: 20px;
         }
-        input{
+
+        input {
             cursor: pointer;
         }
         input[type='color'] {
             width: 100px;
         }
-        img{
+        img {
             padding: var(--spacing);
             background-color: #ffc600;
             filter: blur(var(--blur));
             margin-top: 30px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            h1 {
+                font-size: 60px;
+            }
+            .text-div {
+                font-size: 30px;
+                margin-top: 20px;
+            }
+            img{
+                width: 80%;
+            }
+        }
+        @media screen and (max-width: 650px) {
+            h1 {
+                font-size: 40px;
+            }
+            .text-div {
+                font-size: 20px;
+                margin-top: 10px;
+            }
+            img{
+                width: 80%;
+            }
         }
     </style>
 
     <script>
         const inputs = document.querySelectorAll('.container input')
 
-        function changeFunction(){
+        function changeFunction() {
             const dataType = this.dataset.sizing || ''
             document.documentElement.style.setProperty(`--${this.name}`, `${this.value}` + dataType)
         }
