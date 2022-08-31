@@ -13,7 +13,7 @@
         <h1>Update CSS Variables with <span>JS</span></h1>
         <div class="text-div">
             <span>Spacing:</span>
-            <input type="range" min="0" max="200" name="spacing" data-sizing="px" value="0">
+            <input type="range" min="0" max="200" name="spacing" data-sizing="px" value="10">
             <span>Blur:</span>
             <input type="range" min="0" max="10" name="blur" data-sizing="px" value="2">
             <span>Base Color: </span>
@@ -24,12 +24,12 @@
 
     <style>
         :root {
-            --spacing: 0px;
+            --spacing: 10px;
             --blur: 5px;
             --color: #ffc600;
         }
         body {
-            background-color: rgba(16, 16, 115, 0.904);
+            background-color: rgba(38, 38, 104, 0.904);
             color: white;
             display: flex;
             justify-content: center;
