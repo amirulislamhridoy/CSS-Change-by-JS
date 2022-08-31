@@ -58,7 +58,7 @@
         }
         img {
             padding: var(--spacing);
-            background-color: #ffc600;
+            background-color: var(--color);
             filter: blur(var(--blur));
             margin-top: 30px;
         }
@@ -95,6 +95,7 @@
         function changeFunction() {
             const dataType = this.dataset.sizing || ''
             document.documentElement.style.setProperty(`--${this.name}`, `${this.value}` + dataType)
+            console.log(this.value)
         }
         inputs.forEach(input => input.addEventListener('change', changeFunction))
     </script>
